@@ -4,12 +4,12 @@ diet_num_list = []
 product_diet_list = []
 count = 0
 
-with open('diet.csv', 'r', newline='') as file:
+with open('diet_output.csv', 'r', newline='') as file:
     diet_var = csv.reader(file)
     for i in diet_var:
         diet_num_list.append(i)
 
-with open('produce_default.csv', 'r', newline='') as file:
+with open('dairy_data.csv', 'r', newline='') as file:
     diet_var = csv.reader(file)
     for i in diet_var:
         product_diet_list.append(i)
@@ -75,10 +75,10 @@ for i in diet_num_list:
 for i in product_diet_list:
     print(i)
 
-with open('diet_output.csv', 'w', newline='') as file:
+with open('diet_output2.csv', 'w', newline='') as file:
     diet_output = csv.writer(file)
     diet_output.writerows(diet_num_list)
 
-with open('product_output.csv', 'w', newline='') as file:
+with open('dairy_output.csv', 'w', newline='') as file:
     product_output = csv.writer(file)
     product_output.writerows(product_diet_list)
