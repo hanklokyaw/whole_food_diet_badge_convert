@@ -4,12 +4,12 @@ diet_num_list = []
 product_diet_list = []
 count = 0
 
-with open('diet_output.csv', 'r', newline='') as file:
+with open('fmban_diet_default.csv', 'r', newline='') as file:
     diet_var = csv.reader(file)
     for i in diet_var:
         diet_num_list.append(i)
 
-with open('dairy_data.csv', 'r', newline='') as file:
+with open('fmban_diet.csv', 'r', newline='') as file:
     diet_var = csv.reader(file)
     for i in diet_var:
         product_diet_list.append(i)
